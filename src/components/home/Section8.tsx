@@ -7,7 +7,7 @@ import MarkunreadIcon from '@mui/icons-material/Markunread';
 import Link from "next/link"
 export default function Section8(){
     return (
-        <div className=" bg-zinc-800 flex flex-col gap-16 py-24 px-16 lg:flex-row">
+        <div className=" bg-zinc-800 flex flex-col gap-16 py-24 px-7 lg:px-16 lg:flex-row">
         <div className=" text-white">
           <h1 className=" text-xl font-medium pb-4">ABOUT US</h1>
           <hr className="h-1 bg-yellow-500 border-0 mb-8"></hr>
