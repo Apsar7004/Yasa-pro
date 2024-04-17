@@ -1,5 +1,5 @@
 "use client"
-import { Autocomplete,CircularProgress,TextField} from "@mui/material"
+import { Autocomplete,TextField} from "@mui/material"
 import Image from "next/image";
 import { useState } from "react";
 
@@ -9,8 +9,14 @@ export default function Section2(){
   const [phone,setPhone] = useState()
   const [from,setFrom] = useState()
   const [to,setTo] = useState()
-  const [when,setWhen] = useState()   
-  const [top100Films,settop100films] = useState([])
+  const [when,setWhen] = useState()
+
+    
+  const top100Films = ['The Shawshank Redemption',
+  'The Godfather',
+  'The Godfather: Part II',
+  'The Dark Knight',
+  '12 Angry Men']
   
 //  relative bottom-[100px] z-[-999]
 
@@ -51,32 +57,16 @@ height={140}
   </div>
   </div>
 
-  <Autocomplete
-      id="location-input"
-      options={top100Films}
-      inputValue={when}
-      onInputChange={(event,newval)=>{
-        setWhen(newval)
-        setTimeout(()=>{
-          settop100films(['Amadeus',
-          'Toy Story 3', 
-          'Logan', 
-          'Dangal',
-          'The Sting'])
-        },3000)
-      }}
-     
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          label="When"
-          variant="standard"
-        />
-      )}
-    />
-
-
-
+  
+  <Autocomplete 
+inputValue={when}
+onInputChange={(event, newValue) => {
+  setWhen(newValue);
+}}
+id="controllable-states-demo"
+options={top100Films}
+renderInput={(params) => <TextField {...params} label="When" />}
+/>
 <button className="bg-black text-white mx-auto px-8 py-2 font-semibold" onClick={(e)=>handlesubmit(e)}>SUBMIT</button>
   </form>
 </div>
