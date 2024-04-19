@@ -11,15 +11,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-          user:'m.apsar0786@gmail.com', 
-          pass:'omrk gnde ejdy yquq',
+          user:process.env.nodemailer_mail, 
+          pass:process.env.nodemailer_key,
         },
       });
 
       // Define email content
       let mailOptions = {
-        from:'m.apsar0786@gmail.com', // Sender address
-        to: 'm.apsar0786@gmail.com',
+        from:process.env.nodemailer_mail, // Sender address
+        to: process.env.nodemailer_mail,
         subject: 'Booking',
         text: `
           Name: ${name}
