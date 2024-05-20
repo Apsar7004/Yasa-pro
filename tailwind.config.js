@@ -7,7 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      colors: {
+        'light-cyan': 'rgba(230, 240, 240, 1)',
+        'coolGray':'rgba(3, 46, 46, 1)'
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

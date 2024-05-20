@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <title>yasa-project</title>
       </head>
       <body className={`${roboto.className}`} >
-      {pathname !== '/agent' && <Navbar />}
+      {pathname === '/' && <Navbar />}
        {children}
     
         </body>
