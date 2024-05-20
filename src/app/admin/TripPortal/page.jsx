@@ -8,7 +8,7 @@ import { AdminPanelSettingsOutlined, ChecklistOutlined, CommuteOutlined, Currenc
 import { usePathname } from "next/navigation";
 
 function TripPortal(){
-    const [trips,settrips] = useState<String[]>([])
+    const [trips,settrips] = useState([])
     const [age, setAge] = useState(10);
     const pathname = usePathname();
     function convert24To12(time24) {

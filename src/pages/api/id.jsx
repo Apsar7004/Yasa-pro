@@ -6,7 +6,7 @@ import { Vehicle } from '../../models/SchemasforDb'; // Assuming you have a Mong
 
 
 // API route handler
-export default async function handler(req:NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
   if (req.method === 'GET') {
     console.log(req.params.id);
 //     // Connect to MongoDB
